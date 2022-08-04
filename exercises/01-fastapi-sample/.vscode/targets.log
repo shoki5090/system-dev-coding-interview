@@ -1,0 +1,402 @@
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
+# GNU Make 4.3
+# Built for Windows32
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Thu Aug 04 11:57:13 2022
+
+# Variables
+
+# environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
+# environment
+SYSTEMDRIVE = C:
+# environment
+LC_ALL = C
+# environment
+USERPROFILE = C:\Users\shoki.ko
+# environment
+VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
+# environment
+TMPDIR = C:\Users\shoki.ko\AppData\Local\Temp
+# environment
+LOCALAPPDATA = C:\Users\shoki.ko\AppData\Local
+# environment
+VSCODE_CWD = C:\Users\shoki.ko\Documents\coding-practice\system-dev-coding-interview\exercises\01-fastapi-sample
+# environment
+MINGW_PREFIX = C:/Program Files/Git/mingw64
+# environment
+NSPR_NATIVE_THREADS_ONLY = 1
+# environment
+CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
+# environment
+SYSTEMROOT = C:\WINDOWS
+# environment
+PROCESSOR_LEVEL = 6
+# environment
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+# default
+MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
+# environment
+USERDNSDOMAIN = INTRA.RAKUTEN.CO.JP
+# automatic
+@D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
+# environment
+ACLOCAL_PATH = C:\Program Files\Git\mingw64\share\aclocal;C:\Program Files\Git\usr\share\aclocal
+# environment
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_34748_FOBILIGUKGATNNRG
+# environment
+ORIGINAL_TEMP = C:/Users/shoki.ko/AppData/Local/Temp
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = C:/Users/shoki.ko/Documents/coding-practice/system-dev-coding-interview/exercises/01-fastapi-sample
+# automatic
+%D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
+# environment
+HOSTNAME = P75756
+# environment
+OLDPWD = C:/Users/shoki.ko/Documents/coding-practice/system-dev-coding-interview/exercises/01-fastapi-sample/sql_app
+# environment
+HISTTIMEFORMAT = %F %T 
+# automatic
+^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
+# automatic
+%F = $(notdir $%)
+# environment
+CONDA_PROMPT_MODIFIER = (coding-practice) 
+# environment
+VSCODE_CODE_CACHE_PATH = C:\Users\shoki.ko\AppData\Roaming\Code\CachedData\3b889b090b5ad5793f524b5d1d39fda662b96a2a
+# environment
+SSH_ASKPASS = C:/Program Files/Git/mingw64/libexec/git-core/git-gui--askpass
+# environment
+LANG = C
+# default
+.LOADED := 
+# environment
+TMP = C:\Users\shoki.ko\AppData\Local\Temp
+# default
+.INCLUDE_DIRS = .
+# environment
+PROCESSOR_ARCHITEW6432 = AMD64
+# makefile
+MAKEFLAGS = pqrR
+# environment
+PKG_CONFIG_PATH = C:\Program Files\Git\mingw64\lib\pkgconfig;C:\Program Files\Git\mingw64\share\pkgconfig
+# environment
+ONEDRIVE = C:\Users\shoki.ko\OneDrive
+# environment
+INTELLIJ IDEA COMMUNITY EDITION = C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.3\bin;
+# makefile
+CURDIR := c:/Users/shoki.ko/Documents/coding-practice/system-dev-coding-interview/exercises/01-fastapi-sample
+# environment
+MSYSTEM_CARCH = x86_64
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
+*D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
+# environment
+PROGRAMFILES = C:\Program Files (x86)
+# environment
+MFLAGS = -pqrR
+# default
+.SHELLFLAGS := -c
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# automatic
++D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# environment
+CONDA_SHLVL = 2
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_PID = 34748
+# automatic
+?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
+# environment
+CONDA_PYTHON_EXE = C:/Users/shoki.ko/Miniconda3/python.exe
+# environment
+MINGW_CHOST = x86_64-w64-mingw32
+# automatic
+*F = $(notdir $*)
+# environment
+MANPATH = C:\Program Files\Git\mingw64\local\man;C:\Program Files\Git\mingw64\share\man;C:\Program Files\Git\usr\local\man;C:\Program Files\Git\usr\share\man;C:\Program Files\Git\usr\man;C:\Program Files\Git\share\man
+# automatic
+<D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# default
+MAKE_HOST := Windows32
+# environment
+PROGRAMDATA = C:\ProgramData
+# environment
+CONDA_PREFIX = C:\Users\shoki.ko\Miniconda3\envs\coding-practice
+# environment
+INFOPATH = C:\Program Files\Git\usr\local\info;C:\Program Files\Git\usr\share\info;C:\Program Files\Git\usr\info;C:\Program Files\Git\share\info
+# environment
+ORIGINAL_PATH = C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\shoki.ko\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\AdoptOpenJDK\jdk-11.0.11.9-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\mingw-w64\mingw64\bin;C:\Program Files\Java\jdk-17.0.1\bin;C:\Program Files (x86)\Box\Box Edit;C:\Program Files (x86)\Calibre2;C:\Program Files (x86)\Vim\vim82;C:\Program Files\Git\cmd;C:\Users\shoki.ko\AppData\Local\Programs\Python\Python310;C:\Users\shoki.ko\AppData\Local\Programs\Python\Python310\Scripts;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Users\shoki.ko\AppData\Local\Microsoft\WindowsApps;C:\Users\shoki.ko\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.3\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2021.2.3\bin;C:\Users\shoki.ko\AppData\Local\GitHubDesktop\bin;C:\Users\shoki.ko\AppData\Roaming\npm;C:\Program Files\heroku\bin
+# makefile
+SHELL = C:/Program Files/Git/usr/bin/sh.exe
+# environment
+HOMEPATH = \Users\shoki.ko
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 2
+# environment
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+COMSPEC = C:\WINDOWS\system32\cmd.exe
+# environment
+WINDIR = C:\WINDOWS
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = C:\Users\shoki.ko\Miniconda3\envs\coding-practice;C:\Users\shoki.ko\Miniconda3\envs\coding-practice\Library\mingw-w64\bin;C:\Users\shoki.ko\Miniconda3\envs\coding-practice\Library\usr\bin;C:\Users\shoki.ko\Miniconda3\envs\coding-practice\Library\bin;C:\Users\shoki.ko\Miniconda3\envs\coding-practice\Scripts;C:\Users\shoki.ko\Miniconda3\envs\coding-practice\bin;C;C:\Program Files\Git\Users\shoki.ko\Miniconda3;C;C:\Program Files\Git\Users\shoki.ko\Miniconda3\Library\mingw-w64\bin;C;C:\Program Files\Git\Users\shoki.ko\Miniconda3\Library\usr\bin;C;C:\Program Files\Git\Users\shoki.ko\Miniconda3\Library\bin;C;C:\Program Files\Git\Users\shoki.ko\Miniconda3\Scripts;C;C:\Program Files\Git\Users\shoki.ko\Miniconda3\bin;C;C:\Program Files\Git\Users\shoki.ko\Miniconda3\condabin;C:\Users\shoki.ko\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\shoki.ko\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\AdoptOpenJDK\jdk-11.0.11.9-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\mingw-w64\mingw64\bin;C:\Program Files\Java\jdk-17.0.1\bin;C:\Program Files (x86)\Box\Box Edit;C:\Program Files (x86)\Calibre2;C:\Program Files (x86)\Vim\vim82;C:\Program Files\Git\cmd;C:\Users\shoki.ko\AppData\Local\Programs\Python\Python310;C:\Users\shoki.ko\AppData\Local\Programs\Python\Python310\Scripts;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Users\shoki.ko\AppData\Local\Microsoft\WindowsApps;C:\Users\shoki.ko\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.3\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2021.2.3\bin;C:\Users\shoki.ko\AppData\Local\GitHubDesktop\bin;C:\Users\shoki.ko\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+# environment
+ZES_ENABLE_SYSMAN = 1
+# environment
+COMPUTERNAME = P75756
+# default
+MAKEFILES := 
+# environment
+LANGUAGE = en_US.UTF-8
+# automatic
+^F = $(notdir $^)
+# environment
+MINGW_PACKAGE_PREFIX = mingw-w64-x86_64
+# environment
+PROMPT = $P$G
+# environment
+CHOCOLATEYLASTPATHUPDATE = 132871130712221427
+# environment
+LOGONSERVER = \\ADS103
+# environment
+USERNAME = shoki.ko
+# environment
+TERM_PROGRAM = mintty
+# environment
+COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
+# automatic
+?F = $(notdir $?)
+# environment
+PROGRAMW6432 = C:\Program Files
+# environment
+MSYSTEM_CHOST = x86_64-w64-mingw32
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+# automatic
++F = $(notdir $+)
+# environment
+CONFIG_SITE = C:/Program Files/Git/etc/config.site
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+USERDOMAIN = INTRA
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+CONDA_DEFAULT_ENV = coding-practice
+# environment
+OS = Windows_NT
+# environment
+MSYSTEM_PREFIX = C:/Program Files/Git/mingw64
+# makefile
+.DEFAULT_GOAL := dev
+# environment
+HISTCONTROL = erasedups:ignoredups
+# environment
+DISPLAY = needs-to-be-defined
+# default
+MAKE_VERSION := 4.3
+# environment
+BASH_SILENCE_DEPRECATION_WARNING = 1
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# environment
+UATDATA = C:\WINDOWS\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
+# environment
+USERDOMAIN_ROAMINGPROFILE = INTRA
+# environment
+NUMBER_OF_PROCESSORS = 8
+# environment
+PUBLIC = C:\Users\Public
+# environment
+_ = C:/Users/shoki.ko/AppData/Local/Programs/Microsoft VS Code/Code.exe
+# environment
+APPDATA = C:\Users\shoki.ko\AppData\Roaming
+# environment
+HOMEDRIVE = C:
+# environment
+_CE_M = 
+# environment
+LC_CTYPE = en_US.UTF-8
+# environment
+PROCESSOR_ARCHITECTURE = x86
+# environment
+PYCHARM COMMUNITY EDITION = C:\Program Files\JetBrains\PyCharm Community Edition 2021.2.3\bin;
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+MSYSTEM = MINGW64
+# environment
+HOME = C:\Users\shoki.ko
+# environment
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# environment
+CONDA_PREFIX_1 = C:\Users\shoki.ko\Miniconda3
+# environment
+EXEPATH = C:\Program Files\Git
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+TEMP = C:\Users\shoki.ko\AppData\Local\Temp
+# environment
+TERM = xterm
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\79882f94e378d0ec12e1825978c56cd4-1.69.2-main-sock
+# default
+.RECIPEPREFIX := 
+# environment
+ORIGINAL_TMP = C:/Users/shoki.ko/AppData/Local/Temp
+# automatic
+<F = $(notdir $<)
+# environment
+PLINK_PROTOCOL = ssh
+# default
+SUFFIXES := 
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# environment
+SESSIONNAME = Console
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
+# environment
+PROCESSOR_REVISION = 8e0c
+# environment
+TERM_PROGRAM_VERSION = 3.5.0
+# environment
+CONDA_EXE = C:/Users/shoki.ko/Miniconda3/Scripts/conda.exe
+# environment
+_CE_CONDA = 
+# environment
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 12, GenuineIntel
+# variable set hash-table stats:
+# Load=143/1024=14%, Rehash=0, Collisions=19/170=11%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (key c:/Users/shoki.ko/Documents/coding-practice/system-dev-coding-interview/exercises/01-fastapi-sample, mtime 1659581829): 9 files, no impossibilities.
+
+# 9 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+lint:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 13):
+	poetry run pysen run lint
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-04 11:55:45
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+dev:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 4):
+	poetry run uvicorn sql_app.main:app --reload
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+run:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 7):
+	poetry run uvicorn sql_app.main:app --host 0.0.0.0 --port 8000
+
+test:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 16):
+	poetry run pytest
+
+format:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 10):
+	poetry run pysen run format
+
+.PHONY: dev run format lint test
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=10/1024=1%, Rehash=0, Collisions=0/30=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 18 / storage = 133 B / avg = 7 B
+# current buf: size = 8174 B / used = 133 B / count = 18 / avg = 7 B
+
+# strcache performance: lookups = 33 / hit rate = 45%
+# hash-table stats:
+# Load=18/8192=0%, Rehash=0, Collisions=0/33=0%
+# Finished Make data base on Thu Aug 04 11: 
+57:13 2022
+
+ 

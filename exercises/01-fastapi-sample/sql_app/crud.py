@@ -1,7 +1,9 @@
+from hashlib import new
 from sqlalchemy.orm import Session
 
 from . import models, schemas
 
+from secrets import token_hex
 
 def get_user(db: Session, user_id: int):
     return db.query(models.User).filter(models.User.id == user_id).first()
@@ -17,7 +19,8 @@ def get_users(db: Session, skip: int = 0, limit: int = 100):
 
 def create_user(db: Session, user: schemas.UserCreate):
     fake_hashed_password = user.password + "notreallyhashed"
-    db_user = models.User(email=user.email, hashed_password=fake_hashed_password)
+    api_token = _create_unique_token(db)
+    db_user = models.User(email=user.email, hashed_password=fake_hashed_password, api_token = api_token)
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
@@ -34,3 +37,10 @@ def create_user_item(db: Session, item: schemas.ItemCreate, user_id: int):
     db.commit()
     db.refresh(db_item)
     return db_item
+
+def _create_unique_token(db: Session):
+    while True:
+        new_token = token_hex(16)
+        # check if the token already exist in database
+        if db.query(models.User).filter(models.User.api_token == new_token).first() is None:
+            return new_token
