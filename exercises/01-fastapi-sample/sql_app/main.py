@@ -1,6 +1,7 @@
 from typing import List
 from pydantic import Required
 from fastapi import Depends, FastAPI, HTTPException, Header
+from setuptools import Require
 from sqlalchemy.orm import Session
 
 from . import crud, models, schemas, auth
@@ -74,6 +75,12 @@ def read_user_items(skip: int = 0, limit: int = 100, x_api_token: str = Header(R
         return items
     else:
         raise HTTPException(status_code=404, detail="API Token not found")
+
+@app.post("/delete_user/{user_id}", response_model=schemas.User)
+def delete_user(user_id:int, x_api_token:str = Header(Required), db: Session = db_session):
+    _check_api_token(db, api_token=x_api_token)
+    db_user = crud.delete_user(db, user_id=user_id)
+    return db_user
 
 def _check_api_token(db: Session, api_token: str):
     if not auth.check_token_exist(db, api_token=api_token):
