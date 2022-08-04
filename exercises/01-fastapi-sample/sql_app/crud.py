@@ -64,9 +64,7 @@ def _create_unique_token(db: Session):
 def _move_item_min_userid(db: Session, items:List[models.Item]):
     try:
         min_active_userid = db.query(func.min(models.User.id).label("min_user_id")).filter(models.User.is_active == True).one_or_none()
-        print("*********$$$$$$$$$$$$$$$**************")
-        print(min_active_userid)
-        print("*********$$$$$$$$$$$$$$$**************")
+
         if min_active_userid is None:
             min_active_userid = 0
         else:

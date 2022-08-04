@@ -74,7 +74,7 @@ def read_user_items(skip: int = 0, limit: int = 100, x_api_token: str = Header(R
         items = crud.get_user_item(db=db, user_id=user_id, skip=skip, limit=limit)
         return items
     else:
-        raise HTTPException(status_code=404, detail="API Token not found")
+        raise HTTPException(status_code=404, detail="API Token not found or not active")
 
 @app.post("/delete_user/{user_id}", response_model=schemas.User)
 def delete_user(user_id:int, x_api_token:str = Header(Required), db: Session = db_session):
@@ -84,5 +84,5 @@ def delete_user(user_id:int, x_api_token:str = Header(Required), db: Session = d
 
 def _check_api_token(db: Session, api_token: str):
     if not auth.check_token_exist(db, api_token=api_token):
-        raise HTTPException(status_code=404, detail="API Token not found")
+        raise HTTPException(status_code=404, detail="API Token not found or not active")
     return True
