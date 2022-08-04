@@ -1,4 +1,3 @@
-from hashlib import new
 from sqlalchemy.orm import Session
 
 from . import models, schemas

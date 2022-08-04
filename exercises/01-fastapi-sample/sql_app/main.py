@@ -3,7 +3,7 @@ from typing import List, Union
 from fastapi import Depends, FastAPI, HTTPException, Header
 from sqlalchemy.orm import Session
 
-from . import crud, models, schemas
+from . import crud, models, schemas, auth
 from .database import SessionLocal, engine
 
 models.Base.metadata.create_all(bind=engine)
@@ -38,12 +38,14 @@ def create_user(user: schemas.UserCreate, db: Session = db_session):
 
 @app.get("/users/", response_model=List[schemas.User])
 def read_users(skip: int = 0, limit: int = 100, x_api_token: Union[str, None] = Header(default=None), db: Session = db_session):
+    _check_api_token(db, api_token=x_api_token)
     users = crud.get_users(db, skip=skip, limit=limit)
     return users
 
 
 @app.get("/users/{user_id}", response_model=schemas.User)
 def read_user(user_id: int, x_api_token: Union[str, None] = Header(default=None) , db: Session = db_session):
+    _check_api_token(db, api_token=x_api_token)
     db_user = crud.get_user(db, user_id=user_id)
     if db_user is None:
         raise HTTPException(status_code=404, detail="User not found")
@@ -54,10 +56,18 @@ def read_user(user_id: int, x_api_token: Union[str, None] = Header(default=None)
 def create_item_for_user(
     user_id: int, item: schemas.ItemCreate, x_api_token: Union[str, None] = Header(default=None), db: Session = db_session
 ):
+    _check_api_token(db, api_token=x_api_token)
     return crud.create_user_item(db=db, item=item, user_id=user_id)
 
 
 @app.get("/items/", response_model=List[schemas.Item])
 def read_items(skip: int = 0, limit: int = 100, x_api_token: Union[str, None] = Header(default=None), db: Session = db_session):
+    _check_api_token(db, api_token=x_api_token)
     items = crud.get_items(db, skip=skip, limit=limit)
     return items
+
+
+def _check_api_token(db: Session, api_token: str):
+    if not auth.check_token_exist(db, api_token=api_token):
+        raise HTTPException(status_code=404, detail="API Token not found")
+    return True
