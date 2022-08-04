@@ -37,6 +37,12 @@ def create_user_item(db: Session, item: schemas.ItemCreate, user_id: int):
     db.refresh(db_item)
     return db_item
 
+def get_user_item(db: Session, user_id: int, skip: int = 0, limit: int = 100):
+    print("*************&&&&&&&&&&&&&&&&************")
+    print(user_id)
+    print("*************&&&&&&&&&&&&&&&&************")
+    return db.query(models.Item).filter(models.Item.owner_id == user_id).offset(skip).limit(limit).all()
+
 def _create_unique_token(db: Session):
     while True:
         new_token = token_hex(16)
