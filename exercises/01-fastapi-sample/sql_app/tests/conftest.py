@@ -38,3 +38,32 @@ def test_db():
 def client():
     client = TestClient(app)
     return client
+
+@pytest.fixture
+def create_user(test_db, client):
+    response = client.post(
+        "/users/",
+        json={"email": "deadpool@example.com", "password": "chimichangas4life"},
+    )
+    assert response.status_code == 200, response.text
+    data = response.json()
+    return data
+
+@pytest.fixture
+def create_second_user(test_db, client):
+    response = client.post(
+        "/users/",
+        json={"email": "ironman@example.com", "password": "shoyuRamen"},
+    )
+    assert response.status_code == 200, response.text
+    data = response.json()
+    return data
+
+@pytest.fixture
+def dummy_items():
+    items = [
+        {"title" : "Ryan Reynolds", "description" : "Deadpool"},
+        {"title" : "Morena Baccarin", "description" : "Vanessa"}
+    ]
+
+    return items
