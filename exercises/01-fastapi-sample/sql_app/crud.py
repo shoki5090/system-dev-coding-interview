@@ -22,7 +22,7 @@ def get_users(db: Session, skip: int = 0, limit: int = 100):
 
 def create_user(db: Session, user: schemas.UserCreate):
     fake_hashed_password = user.password + "notreallyhashed"
-    api_token = _create_unique_token(db)
+    api_token = _create_unique_token(db) # Creates an unique token by cheking with DB
     db_user = models.User(email=user.email, hashed_password=fake_hashed_password, api_token = api_token)
     
     db.add(db_user)
@@ -31,8 +31,8 @@ def create_user(db: Session, user: schemas.UserCreate):
 
     # Add no owner items (owner_id = 0) to the newly created user
     min_active_userid = db.query(func.min(models.User.id).label("min_user_id")).filter(models.User.is_active == True).one_or_none()[0]
-    zero_owner_items = db.query(models.Item).filter(models.Item.owner_id == None).offset(0).limit(100).all()
-    if db_user.id == min_active_userid and len(zero_owner_items) > 0:
+    zero_owner_items = db.query(models.Item).filter(models.Item.owner_id == None).offset(0).limit(100).all() # items with no owner
+    if db_user.id == min_active_userid and len(zero_owner_items) > 0: # move no owner items to new user 
         for item in zero_owner_items:
             item.owner_id = db_user.id
     db.commit()
@@ -61,10 +61,13 @@ def delete_user(db: Session, user_id:int):
     db.commit()
 
     items = get_user_item(db, user_id, skip=0, limit=100)
-    min_userid = _move_item_min_userid(db, items)
+    min_userid = _move_item_min_userid(db, items) # move item to min active user id, if no such user exist, we put 0 (NULL) as user id
 
     return user
 def _create_unique_token(db: Session):
+    """
+    Helper function to create unique api token
+    """
     while True:
         new_token = token_hex(16)
         # check if the token already exist in database
@@ -72,6 +75,9 @@ def _create_unique_token(db: Session):
             return new_token
 
 def _move_item_min_userid(db: Session, items:List[models.Item]):
+    """
+    Helper function to move items to min active user id, if no such user exist, we put 0 (NULL) as user id
+    """
     try:
         min_active_userid = db.query(func.min(models.User.id).label("min_user_id")).filter(models.User.is_active == True).one_or_none()
 

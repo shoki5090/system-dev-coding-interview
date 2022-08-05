@@ -39,6 +39,7 @@ def create_user(user: schemas.UserCreate, db: Session = db_session):
 
 @app.get("/users/", response_model=List[schemas.User])
 def read_users(skip: int = 0, limit: int = 100, x_api_token: str = Header(Required), db: Session = db_session):
+    #check if api token is valid (exist AND is active)
     _check_api_token(db, api_token=x_api_token)
     users = crud.get_users(db, skip=skip, limit=limit)
     return users
@@ -76,6 +77,7 @@ def read_user_items(skip: int = 0, limit: int = 100, x_api_token: str = Header(R
     else:
         raise HTTPException(status_code=404, detail="API Token not found or not active")
 
+# Endpoint to delete user by setting is active to False
 @app.post("/delete_user/{user_id}", response_model=schemas.User)
 def delete_user(user_id:int, x_api_token:str = Header(Required), db: Session = db_session):
     _check_api_token(db, api_token=x_api_token)
@@ -83,6 +85,9 @@ def delete_user(user_id:int, x_api_token:str = Header(Required), db: Session = d
     return db_user
 
 def _check_api_token(db: Session, api_token: str):
+    """
+    Helper function that returns bool if api token is valid (exist AND is active)
+    """
     if not auth.check_token_exist(db, api_token=api_token):
         raise HTTPException(status_code=404, detail="API Token not found or not active")
     return True
