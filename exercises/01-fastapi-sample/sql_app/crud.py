@@ -21,13 +21,23 @@ def get_users(db: Session, skip: int = 0, limit: int = 100):
 
 
 def create_user(db: Session, user: schemas.UserCreate):
-    #TODO: When the only user is created and there are items with no belonger, transfer all items to new user
     fake_hashed_password = user.password + "notreallyhashed"
     api_token = _create_unique_token(db)
     db_user = models.User(email=user.email, hashed_password=fake_hashed_password, api_token = api_token)
+    
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
+
+    # Add no owner items (owner_id = 0) to the newly created user
+    min_active_userid = db.query(func.min(models.User.id).label("min_user_id")).filter(models.User.is_active == True).one_or_none()[0]
+    zero_owner_items = db.query(models.Item).filter(models.Item.owner_id == None).offset(0).limit(100).all()
+    if db_user.id == min_active_userid and len(zero_owner_items) > 0:
+        for item in zero_owner_items:
+            item.owner_id = db_user.id
+    db.commit()
+    db_user = get_user(db, db_user.id)
+
     return db_user
 
 
