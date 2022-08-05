@@ -5,7 +5,7 @@ from secrets import token_hex
 [O] Create User
 [O] Read User
 [O] Create Item for User
-[] Read Items
+[O] Read Items
 [O] Read User Items
 [O] Delete User
 """
